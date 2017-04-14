@@ -1,0 +1,240 @@
+.public-main{
+    width:1000px;
+    height:550px;
+    border:1px solid #D2D2D2;
+    margin:50px auto;
+}
+/*容器居中*/
+.public-container{
+    width:980px;
+    overflow: hidden;
+    margin:0 auto;
+}
+/*顶部*/
+.public-header{
+    height: 60px;
+    border-bottom:1px solid #ccc;
+    background: #31C37C;
+}
+.public-head-left img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 10px;
+ }
+.public-head-left img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.public-header a{
+    display: block;
+    float: left;
+    margin-left: 5px;
+    color:#fff;
+}
+.public-header span{
+    color:#ACE09C;
+    float: left;
+    margin-top:-5px;
+    margin-left: 3px;
+    margin-right: 20px;
+}
+.public-head-left{
+    padding-top:5px;
+}
+.public-head-center a{
+    color:#ACE09C;
+    font-size: 16px;
+    margin-left: 20px;
+    display: inline-block;
+    margin-top:-15px;
+}
+#sousuo{
+    margin-left: 50px;
+}
+.public-head-center a:hover{
+    color:#fff;
+}
+.public-head-center input{
+    display: block;
+    position: absolute;
+    top:67px;
+    left:480px;
+    width:200px;
+    height:30px;
+    border-radius: 2em;
+    padding-left:10px;
+    background: #fff url("../img/搜索.png") 170px center no-repeat;
+}
+#dw{
+    width:32px;
+    height:30px;
+    font-size: 20px;
+    position: absolute;
+    top:73px;
+    left:680px;
+}
+#dw:hover{
+    color:#fff;
+    width:32px;
+    height:30px;
+    background: #46C989;
+    cursor: pointer;
+}
+.public-right{
+    float: right;
+}
+.public-head-right a{
+    display: block;
+    width:32px;
+    height:32px;
+    font-size: 16px;
+    margin-top:-15px;
+    margin-left: 10px;
+    color:#ACE09C;
+}
+.public-head-right a:hover{
+    color:#fff;
+}
+/*内容*/
+.content{
+    width:100%;
+    height:420px;
+    background: #fff;
+}
+.public-content-left{
+    width:180px;
+    height:inherit;
+    border-right:1px solid #ccc;
+    border-left:1px solid #ccc;
+    overflow: scroll;
+    float: left;
+}
+.public-content-left li{
+    text-align: left;
+    text-indent: 20px;
+    margin-bottom: 7px;
+}
+.public-content-left p{
+    padding-top: 5px;
+    text-align: left;
+    margin-left: 20px;
+    color:#A7A7A7;
+    font-size: 12px;
+}
+.public-content-left span{
+    margin-left: 10px;
+}
+.public-content-left a{
+    font-size: 16px;
+}
+.public-content-left li:hover{
+    background: #F1F5F8;
+}
+.content-right{
+    width:780px;
+    float: left;
+}
+.content-right .right_common{
+    width: 700px;
+    margin: 10px auto;
+}
+.content-right .head{
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+.content-right .head li{
+    float: left;
+    padding: 5px 20px;
+}
+.content-right .head li.active{
+    border-bottom: 2px solid #37C480;
+}
+.content-right .head li.active a{
+    color: #37C480;
+}
+.content-right .music{
+    width: 700px;
+    margin: 0 auto;
+}
+.content-right .music ul{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #F6F6F6;
+}
+.content-right .music ul li{
+    float: left;
+}
+.content-right .music ul li:first-child,.content-right .music div span:first-child{
+    width: 250px;
+    text-indent: 10px;
+}
+.content-right .music ul li:nth-child(2),.content-right .music div span:nth-child(2){
+    width: 100px;
+}
+.content-right .music ul li:nth-child(3),.content-right .music div span:nth-child(3){
+    width: 150px;
+}
+.content-right .music ul li:last-child,.content-right .music div span:last-child{
+    width: 150px;
+}
+.content-right .music div{
+    height: 50px;
+    line-height: 50px;
+}
+.content-right .music div:hover{
+    background: #F4F4F4;
+}
+.content-right .music div span{
+    display: block;
+    float: left;
+    cursor: auto;
+}
+.content-right .music div span img{
+    display: block;
+    float: right;
+    width: 10px;
+    height: 15px;
+    margin-top: 18px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+.content-right .music div:hover span img{
+    display: block;
+}
+/*底部*/
+.public-footer{
+    height:70px;
+    border-top:1px solid #ccc;
+    background: #2D2E30;
+}
+.public-footer a{
+    color:#858585;
+    position: relative;
+    top:20px;
+    left:25px;
+    margin-right: 12px;
+}
+.public-footer a:hover{
+    color:#fff;
+    transition: color 0.5s linear;
+}
+@font-face {
+    font-family: "iocmoon_icon";
+    src:url("../fonts/icomoon.eot") format("embedded-opentype"),
+        url("../fonts/icomoon.woff") format("woff"),
+        url("../fonts/icomoon.ttf") format("truetype"),
+        url("../fonts/icomoon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+.icon{
+    font-family: "iocmoon_icon";
+    font-weight:normal;
+    font-style: normal;
+    font-size: 32px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ音乐</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery-3.2.0.min.js"></script>
+</head>
+<body>
+    <div class="public-main">
+        <div class="public-header">
+            <div class="public-container">
+                <div class="public-head-left">
+                    <img src="img/lbj.jpg" alt="">
+                    <a title="L E B R O N">L E B R O N</a><br>
+                    <span>加速已完成<i style="font-size: 16px" class="icon">&#xf033;</i></span>
+                </div>
+                <div class="public-head-center">
+                    <a class="icon">&#xe923;</a>
+                    <a class="icon">&#xe925;</a>
+                    <a class="icon">&#xe984;</a>
+                    <input style="cursor:pointer" type="search" placeholder="/搜歌手/搜歌名">
+                    <span class="icon" id="dw">&#xe948;</span>
+                </div>
+                <div class="public-right">
+                    <div class="public-head-right">
+                        <a class="icon" style="margin-top:-8px;">&#xea0b;</a>
+                        <a class="icon">&#xea0a;</a>
+                        <a class="icon">&#xea0f;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content public-container">
+            <div class="public-content-left">
+                <div class="top">
+                    <p>我的音乐</p>
+                    <ul>
+                        <li class="active"><a href="#" class="icon">&#xe915;</a><span>音乐馆</span></li>
+                        <li><a href="#" class="icon">&#xe9e2;</a><span>我喜欢</span></li>
+                        <li><a href="#" class="icon">&#xe91e;</a><span>中国新歌声</span></li>
+                        <li><a href="#" class="icon">&#xe911;</a><span>本地歌曲</span></li>
+                        <li><a href="#" class="icon">&#xe9cb;</a><span>播放历史</span></li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                <p>我创建的歌单</p>
+                <ul>
+                    <li><a href="#" class="icon">&#xe971;</a><span>我最爱听</span></li>
+                    <li><a href="#" class="icon">&#xe915;</a><span>我的歌单1</span></li>
+                    <li><a href="#" class="icon">&#xe915;</a><span>我的歌单2</span></li>
+                    <li><a href="#" class="icon">&#xe915;</a><span>我的歌单3</span></li>
+                    <li><a href="#" class="icon">&#xe915;</a><span>我的歌单4</span></li>
+                </ul>
+            </div>
+            </div>
+            <div class="content-right">
+            	<div class="right_common">
+            		<ul class="head">
+	            		<li class="active"><a href="#">歌曲(4)</a></li>
+	            		<li><a href="">最近收藏</a></li>
+	            		<li><a href="">评论(0)</a></li>
+	            	</ul>
+	            	<div class="music">
+	            		<ul>
+	            			<li>歌曲</li>
+	            			<li>歌手</li>
+	            			<li>专辑</li>
+	            			<li>时长</li>
+	            		</ul>
+	            		<div>
+	            			<span>演员<img src="img/play.png" id="yx"></span>
+	            			<span>薛之谦</span>
+	            			<span>绅士</span>
+	            			<span>04:21</span>
+	            		</div>
+	            		<div>
+	            			<span>于是<img src="img/play.png" id="ys"></span>
+	            			<span>G.E.M.邓紫棋</span>
+	            			<span>新的心跳</span>
+	            			<span>03:49</span>
+	            		</div>
+	            		<div>
+	            			<span>Safe & Sound<img src="img/play.png" id="yw1"></span>
+	            			<span>Taylor Swift</span>
+	            			<span>Safe & Sound</span>
+	            			<span>04:02</span>
+	            		</div>
+	            		<div>
+	            			<span>Love Story<img src="img/play.png" id="yw2"></span>
+	            			<span>Taylor Swift</span>
+	            			<span>Love Story</span>
+	            			<span>03:55</span>
+	            		</div>
+	            		<audio id="media1">
+	            			<source src="薛之谦 - 演员.mp3" type="audio/MPEG">
+	            		</audio>
+	            		<audio id="media2">
+	            			<source src="G.E.M. 邓紫棋 - 于是.mp3" type="audio/MPEG" >
+	            		</audio>
+	            		<audio id="media3">
+	            			<source src="Taylor Swift - Safe & Sound.mp3" type="audio/MPEG">
+	            		</audio>
+	            		<audio id="media4">
+	            			<source src="Taylor Swift - Love Story.mp3" type="audio/MPEG">
+	            		</audio>
+	            	</div>
+            	</div>
+            </div>
+        </div>
+        <div class="public-footer">
+            <a href="javascript:;" class="icon" id="prev">&#xea18;</a>
+            <a href="javascript:;" class="icon" id="pause">&#xea16;</a>
+            <a href="javascript:;" class="icon" id="next">&#xea19;</a>
+        </div>
+    </div>
+</body>
+<script>
+	window.onload = function(){
+		var media1 = document.getElementById("media1");
+		var media2 = document.getElementById("media2");
+		var media3 = document.getElementById("media3");
+		var media4 = document.getElementById("media4");
+		var yx = document.getElementById("yx");
+		var ys = document.getElementById("ys");
+		var yw1 = document.getElementById("yw1");
+		var yw2 = document.getElementById("yw2");
+		var pause = document.getElementById("pause");
+		var next = document.getElementById("next");
+		var prev = document.getElementById("prev");
+		var s = 0;
+		next.onclick = function(){
+			if(s == 0){
+				media4.currentTime = 0;
+				media2.pause();
+				media3.pause();
+				media4.pause();
+				media1.play();
+				s++;
+			}else if(s == 1){
+				media1.currentTime = 0;
+				media1.pause();
+				media3.pause();
+				media4.pause();
+				media2.play();
+				s++;
+			}else if(s == 2){
+				media2.currentTime = 0;
+				media1.pause();
+				media2.pause();
+				media4.pause();
+				media3.play();
+				s++;
+			}else{
+				media3.currentTime = 0;
+				media1.pause();
+				media2.pause();
+				media3.pause();
+				media4.play();
+				s=0;
+			}
+		}
+		prev.onclick = function(){
+			if(s == 0){
+				media2.currentTime = 0;
+				media2.pause();
+				media3.pause();
+				media4.pause();
+				media1.play();
+				s--;
+			}else if(s == -1){
+				media1.currentTime = 0;
+				media1.pause();
+				media2.pause();
+				media3.pause();
+				media4.play();
+				s--;
+			}else if(s == -2){
+				media4.currentTime = 0;
+				media1.pause();
+				media2.pause();
+				media4.pause();
+				media3.play();
+				s--;
+			}else{
+				media3.currentTime = 0;
+				media1.pause();
+				media3.pause();
+				media4.pause();
+				media2.play();
+				s=0;
+			}
+		}
+		// if(s == 0){
+		// 	media1.play();
+		// 	s++;
+		// 	next.onclick = function(){
+		// 	if(s == 1){
+		// 		media1.currentTime = 0;
+		// 		media1.pause();
+		// 		media2.play();
+		// 		s++;
+		// 		next.onclick = function(){
+		// 			if(s == 2){
+		// 				media2.currentTime = 0;
+		// 				media2.pause();
+		// 				media3.play();
+		// 				s++;
+		// 				next.onclick = function(){
+		// 						if(s == 3){
+		// 						media3.currentTime = 0;
+		// 						media3.pause();
+		// 						media4.play();
+		// 						s=0;
+		// 					}
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
+		// }
+
+
+		// next.onclick = function(){
+		// 	if(s == 2){
+		// 		media2.currentTime = 0;
+		// 		media2.pause();
+		// 		media3.play();
+		// 		s++;
+		// 	}
+		// }
+		// next.onclick = function(){
+		// 	if(s == 3){
+		// 	media3.currentTime = 0;
+		// 	media3.pause();
+		// 	media4.play();
+		// 	s=0;
+		// }
+		// }
+		
+		yx.onclick = function(){
+			if(media1.paused == true){
+				media1.play();
+			}else{
+				media1.pause();
+			}
+			next.onclick = function(){
+				media1.currentTime = 0;
+				media1.pause();
+				media2.play();
+			}
+		}
+		ys.onclick = function(){
+			if(media2.paused == true){
+				media2.play();
+			}else{
+				media2.pause();
+			}
+			next.onclick = function(){
+				media2.currentTime = 0;
+				media2.pause();
+				media3.play();
+			}
+		}
+		yw1.onclick = function(){
+			if(media3.paused == true){
+				media3.play();
+			}else{
+				media3.pause();
+			}
+			next.onclick = function(){
+				media3.currentTime = 0;
+				media3.pause();
+				media4.play();
+			}
+		}
+		yw2.onclick = function(){
+			if(media4.paused == true){
+				media4.play();
+			}else{
+				media4.pause();
+			}
+			next.onclick = function(){
+				media4.currentTime = 0;
+				media4.pause();
+				media1.play();
+			}
+		}
+		pause.onclick = function(){
+			media1.pause();
+			media2.pause();
+			media2.currentTime = 0;
+			media3.pause();
+			media3.currentTime = 0;
+			media4.pause();
+			media4.currentTime = 0;
+		}
+
+	}
+</script>
+</html>
